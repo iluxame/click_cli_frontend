@@ -27,7 +27,7 @@ class CLI(BaseCLI):
     @BaseCLI.context()
     def cli(ctx, **kwargs):
         """
-        ci-provisioner help message
+        ci-tool help message
         """
         # DEBUG INFO
         ctx.config_dict.update(**kwargs)
