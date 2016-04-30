@@ -76,7 +76,7 @@ class JenkinsSlaveCLI(BaseCLI):
         setup jslave help message
         """
         ctx.config_dict.update(**kwargs)
-        # call to your backend like
+        # call to backend like
         #JenkinsSlaveProvisioner(ctx.config_dict).setup()
 
     @staticmethod
@@ -101,5 +101,5 @@ class JenkinsSlaveCLI(BaseCLI):
         teardown jslave help message
         """
         ctx.config_dict.update(**kwargs)
-        # call to your backend like
+        # call to backend like
         # JenkinsSlaveProvisioner(ctx.config_dict).teardown()

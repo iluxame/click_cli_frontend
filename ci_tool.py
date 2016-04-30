@@ -2,7 +2,7 @@
 import click
 
 from lib.cli_common import BaseCLI
-# lib.cli_common.CLIMeta takes care for registration of bootstrap stuff
+# lib.cli_common.CLIMeta takes care for registration of cli interfaces
 # so import here is in order to include cli sub groups
 import cli_interfaces.jenkins_slave  # noqa
 import cli_interfaces.jenkins_master  # noqa
