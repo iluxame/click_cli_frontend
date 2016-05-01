@@ -77,6 +77,7 @@ class JenkinsSlaveCLI(BaseCLI):
         ctx.config_dict.update(**kwargs)
         # call to backend like
         #JenkinsSlaveProvisioner(ctx.config_dict).setup()
+        click.echo(ctx.config_dict)
 
     @staticmethod
     @click.command()
