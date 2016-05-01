@@ -22,7 +22,6 @@ class CLI(BaseCLI):
                  context_settings=BaseCLI.CONTEXT_SETTINGS)
     @click.option('--project_defaults',
                   type=click.Path(),
-                  required=True,
                   help='path to project defaults conf file')
     @BaseCLI.context()
     def cli(ctx, **kwargs):
