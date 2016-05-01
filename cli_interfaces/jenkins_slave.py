@@ -21,8 +21,8 @@ class JenkinsSlaveCLI(BaseCLI):
     @click.option(
         '--topology',
         type=click.Path(),
-        default='foo/bar/jslave_config',
-        help='path/to/file')
+        default='/foo/bar/jslave_config',
+        help='path/to/file - [/foo/bar/jslave_config]')
     @click.option(
         '--ssh_keyfile',
         type=click.Path(),
@@ -31,7 +31,7 @@ class JenkinsSlaveCLI(BaseCLI):
         '--jslavename',
         type=click.STRING,
         default='my-cool-jslave',
-        help='name of Jenkins slave - ex. my-cool-jslave')
+        help='name of Jenkins slave - [my-cool-jslave]')
     @click.option(
         '--workspace',
         type=click.Path(),
@@ -51,8 +51,7 @@ class JenkinsSlaveCLI(BaseCLI):
         '--jslavelabel',
         type=click.STRING,
         default='my-cool-jslave',
-        help='label(s) for Jenkins slave - comma separated list of desired '
-             'labels')
+        help='label for Jenkins slave - [my-cool-jslave]')
     @click.option(
         '--jenkins_master_url',
         type=click.STRING,
