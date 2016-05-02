@@ -5,13 +5,8 @@ from lib.cli_common import BaseCLI
 
 class JenkinsMasterCLI(BaseCLI):
 
-    JENKINS_MASTER_COMMANDS = ['setup']
+    SUB_GROUP_COMMANDS = ['setup']
     SUB_GROUP_NAME = 'jenkins_master'
-
-    @classmethod
-    def register_cli(cls):
-        for cmd in cls.JENKINS_MASTER_COMMANDS:
-            cls.jenkins_master.add_command(getattr(cls, cmd))
 
     @staticmethod
     @click.group(subcommand_metavar='COMMAND [OPTIONS]',

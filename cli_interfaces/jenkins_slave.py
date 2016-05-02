@@ -7,13 +7,8 @@ from lib.cli_common import BaseCLI
 
 class JenkinsSlaveCLI(BaseCLI):
 
-    JENKINS_SLAVE_COMMANDS = ['setup', 'teardown']
+    SUB_GROUP_COMMANDS = ['setup', 'teardown']
     SUB_GROUP_NAME = 'jenkins_slave'
-
-    @classmethod
-    def register_cli(cls):
-        for cmd in cls.JENKINS_SLAVE_COMMANDS:
-            cls.jenkins_slave.add_command(getattr(cls, cmd))
 
     @staticmethod
     @click.group(subcommand_metavar='COMMAND [OPTIONS]',
